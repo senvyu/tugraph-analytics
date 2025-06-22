@@ -249,6 +249,16 @@ public class GQLAlgorithmTest {
     }
 
     @Test
+    public void testIncGraphAlgorithm_SingleCycleDetection() throws Exception {
+        QueryTester 
+                .build()
+                .withGraphDefine("/query/scd_graph.sql")
+                .withQueryPath("/query/gql_algorithm_single_cycle_detection.sql")
+                .execute()
+                .checkSinkResult();
+    }
+
+    @Test
     public void testAlgorithmCommonNeighbors() throws Exception {
         QueryTester
             .build()

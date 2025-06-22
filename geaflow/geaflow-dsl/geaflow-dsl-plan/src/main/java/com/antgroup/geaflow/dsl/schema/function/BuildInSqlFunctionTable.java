@@ -31,6 +31,7 @@ import com.antgroup.geaflow.dsl.udf.graph.IncWeakConnectedComponents;
 import com.antgroup.geaflow.dsl.udf.graph.KCore;
 import com.antgroup.geaflow.dsl.udf.graph.KHop;
 import com.antgroup.geaflow.dsl.udf.graph.PageRank;
+import com.antgroup.geaflow.dsl.udf.graph.SingleCycleDetection;
 import com.antgroup.geaflow.dsl.udf.graph.SingleSourceShortestPath;
 import com.antgroup.geaflow.dsl.udf.graph.TriangleCount;
 import com.antgroup.geaflow.dsl.udf.graph.WeakConnectedComponents;
@@ -202,6 +203,7 @@ public class BuildInSqlFunctionTable extends ListSqlOperatorTable {
             .add(GeaFlowFunction.of(PercentileInteger.class))
             .add(GeaFlowFunction.of(PercentileDouble.class))
             // UDGA
+            .add(GeaFlowFunction.of(SingleCycleDetection.class))
             .add(GeaFlowFunction.of(SingleSourceShortestPath.class))
             .add(GeaFlowFunction.of(AllSourceShortestPath.class))
             .add(GeaFlowFunction.of(PageRank.class))
